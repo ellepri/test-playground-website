@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body class="bg-default">
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <div class="navbar-logo">Test Playground</div>
+            </div>
+            <div class="navbar-right">
+                <ul class="navbar-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shopping.html" class="nav-link">Shopping</a></li>
+                    <li class="cart-icon"><a href="cart.html" class="nav-link">
+                            🛒<span class="cart-badge" data-cart-badge>0</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="products-page">
+        <h3>🛒 Your Shopping Cart</h3>
+
+        <div class="cart-content">
+            <div class="cart-container" data-cart-container>
+                <!-- Products will appear here -->
+            </div>
+
+            <div class="cart-summary">
+                <h3>Summary</h3>
+                <p>Total Items: <span data-cart-total-items>0</span></p>
+                <p>Total Price: <span data-cart-total-price>$0.00</span></p>
+                <button class="button checkout-btn">Proceed to Checkout</button>
+                <button id="clearCart" class="button clear-cart">Clear Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/dist/cart.js" type="module"></script>
+</body>
+</html>

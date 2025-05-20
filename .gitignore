@@ -1,0 +1,9 @@
+# dependencies
+node_modules/
+
+# build output
+/src/dist/
+
+# Mac OS X
+.DS_Store
+**/.DS_Store

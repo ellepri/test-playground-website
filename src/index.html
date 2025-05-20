@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple UI Elements</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body class="bg-default">
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <div class="navbar-logo">Test Playground</div>
+            </div>
+            <div class="navbar-right">
+                <ul class="navbar-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shopping.html" class="nav-link">Shopping</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-wrapper">
+
+        <!-- Change Background -->
+        <div class="card">
+            <h4>Change colour</h4>
+            <label for="backgroundSelect">Change Background</label>
+            <select class="select" data-background-select>
+                <option value="">Select a Colour</option>
+                <option value="sunset">Sunset Pastel</option>
+                <option value="ocean">Ocean Breeze</option>
+                <option value="mint">Mint Cream</option>
+                <option value="peach">Peach Dream</option>
+            </select>
+        </div>
+
+        <!-- Date Picker -->
+        <div class="card">
+            <h4>Calendar</h4>
+            <label for="dateInput">Choose Date</label>
+            <input type="date" class="input" data-date-input>
+            <div class="error-message" data-date-error></div>
+        </div>
+
+        <div class="card">
+            <h4>Counter</h4>
+
+            <div class="counter-wrapper" data-counter-wrapper>
+                <button class="button counter-btn" data-decrement disabled>-</button>
+                <div class="counter-display" data-counter-display>0</div>
+                <button class="button counter-btn" data-increment>+</button>
+            </div>
+        </div>
+
+        <!-- Dropdowns -->
+        <div class="card">
+            <h4>Dropdown</h4>
+            <label for="categorySelect">Select a Category</label>
+            <select class="select" data-category-select>
+                <option value="">Choose one...</option>
+                <option value="fruit">Fruit</option>
+                <option value="vehicle">Vehicle</option>
+            </select>
+
+            <div class="sub-selection hidden" data-sub-selection>
+                <label for="itemSelect">Select an Item</label>
+                <select class="select" data-item-select>
+                    <option value="">Choose an item...</option>
+                </select>
+            </div>
+
+            <div class="selection-message" data-selection-message></div>
+        </div>
+
+        <!-- Form -->
+        <div class="card">
+            <h4>Form</h4>
+            <label for="formInput">Fill Your Information</label>
+
+            <form class="form" data-info-form novalidate>
+                <div class="form-group">
+                    <label for="nameInput">Name</label>
+                    <input type="text" class="input" id="nameInput" data-name-input placeholder="Enter your name">
+                    <div class="error-message" data-name-error></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="emailInput">Email</label>
+                    <input type="email" class="input" id="emailInput" data-email-input placeholder="Enter your email">
+                    <div class="error-message" data-email-error></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phoneInput">Phone Number</label>
+                    <input type="text" class="input" id="phoneInput" data-phone-input
+                        placeholder="Enter your phone number">
+                    <div class="error-message" data-phone-error></div>
+                </div>
+
+                <button type="submit" class="button" data-info-submit disabled>Submit</button>
+            </form>
+            <div class="success-message hidden" data-success-message>
+                Thanks for submitting your info! We will get back to you soon.
+            </div>
+        </div>
+
+        <!-- Checkboxes -->
+        <div class="card">
+            <h4>Checkboxes</h4>
+            <label for="checkboxItem">Choose Your Preferences</label>
+            <div class="checkbox-group" data-checkbox-group>
+                <div class="checkbox-item">
+                    <input type="checkbox" class="checkbox" id="option1" value="Option 1">
+                    <label for="option1">Option 1</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" class="checkbox" id="option2" value="Option 2">
+                    <label for="option2">Option 2</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" class="checkbox" id="option3" value="Option 3">
+                    <label for="option3">Option 3</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" class="checkbox" id="option4" value="Option 4">
+                    <label for="option4">Option 4</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" class="checkbox" id="option5" value="Option 5">
+                    <label for="option5">Option 5</label>
+                </div>
+            </div>
+
+            <div class="checkbox-summary" data-checkbox-summary>Selected: 0</div>
+            <button class="button secondary" data-toggle-all>Toggle Select All</button>
+        </div>
+
+    </div>
+
+    <script src="/dist/main.js"></script>
+</body>
+
+</html>
