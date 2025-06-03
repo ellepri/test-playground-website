@@ -29,7 +29,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-      # Build 
+      # Setup Node 
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -44,16 +44,16 @@ jobs:
       # zips the site
       - uses: actions/upload-pages-artifact@v3
         with: 
-          path: './src/dist'
+          path: './dist'
   deploy:
     needs: build
+    runs-on: ubuntu-latest
     permissions: 
       pages: write
       id-token: write
     environment: 
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+      url: ${{ steps.deployment.outputs.page_url }}t
     steps: 
       - id: deployment
         uses: actions/deploy-pages@v3
