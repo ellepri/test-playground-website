@@ -2,7 +2,8 @@
 node_modules/
 
 # build output
-/src/dist/
+.parcel-cache
+dist/
 
 # Mac OS X
 .DS_Store
