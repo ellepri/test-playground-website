@@ -32,13 +32,22 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
+      # Build 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: |
+          npm ci
+          npm run build
+        env: 
+          CI: true
 
       # sets up metadata
       - uses: actions/configure-pages@v5
       # zips the site
       - uses: actions/upload-pages-artifact@v3
         with: 
-          path: './dist'
+          path: './src/dist'
   deploy:
     needs: build
     environment: 
